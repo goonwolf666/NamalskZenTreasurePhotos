@@ -1,0 +1,32 @@
+*******************************************************************************
+*			 This adds Zen's Treasure Photos for Namalsk. 
+* Please note: this is not a normal mod that automatically overrides things. 
+*
+* YOU NEED TO PUT MY \Addons\ZenTreasurePhotos.pbo FILE INTO ZENS MOD FOLDER!
+*
+*******************************************************************************
+
+You can add this using either the stand-alone "@Zens Treasure" or the "@Zens Enormous Package" bundle.
+
+Initial setup:
+1. Download "Zens Treasure" or "Zens Enormous Package" mod in the usual way and get one of those working on your server first
+2. Open the \Addons folder where Zens mod installed, and confirm you can see a file there called "ZenTreasurePhotos.pbo"
+3. Download this "@Namalsk ZenTreasure" in the usual way too
+4. Open the \Addons folder where this mod installed, and confirm you can see a file here called "ZenTreasurePhotos.pbo"
+
+Install actions:
+5. In the Zens mod \Addons folder you opened at step 2, rename "ZenTreasurePhotos.pbo" to "ZenTreasurePhotos.pbo.original".
+This gives us the option to roll back these changes, but the orignal file cannot be a .PBO type file anymore or things will crash.
+6. In the "Namalsk ZenTreasure" mod folder you opened at step 4, copy both the "ZenTreasurePhotos.pbo" and the "ZenTreasurePhotos.pbo.GoonWolf.bisign" file.
+Paste these files into the Zens mod \Addons folder that you opened at step 2.
+7. There is also a types.xml file in the "Namalsk ZenTreasure" that you can add to your types files if you want the photos to spawn in world.
+I prefer to use the "SpawnPhotosOnZombiesChance" setting in Zens mod, but you can read up on that at https://github.com/ZenarchistCode/ZenModPack/wiki/ZenTreasure
+
+Notes: 
+8. You do need to have my "GoonWolf.bikey" in the server \keys folder, but I dont think you need to load my "Namalsk ZenTreasure" mod in your server startup.
+9. The important bit is over-writing Zens original "ZenTreasurePhotos.pbo" with my version, and that seems to work.
+10. If you/your server verifies your mods or when Zen releases an update, it will reset all the files we overwrote!
+11. The best way to prevent this is to repack these mods yourself, but that means you'll miss out on updates... 
+
+Good luck
+
