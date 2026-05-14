@@ -1,0 +1,42 @@
+*****************************************************************************************
+*			 This adds Zen's Treasure Photos for Namalsk. 
+*
+* PLEASE NOTE: this is not a normal mod that automatically overrides standard functions.
+* You NEED to copy the ZenTreasurePhotos.pbo file from this mod into Zens \Addons folder.
+*****************************************************************************************
+
+You can add this using either the stand-alone "@Zens Treasure" or the "@Zens Enormous Package" bundle:
+https://steamcommunity.com/sharedfiles/filedetails/?id=3426979799
+https://steamcommunity.com/sharedfiles/filedetails/?id=3288979834
+
+These both need Zens Core mod too, and his wiki page has more info on the Treasure config:
+https://steamcommunity.com/workshop/filedetails/?id=3702420204
+https://github.com/ZenarchistCode/ZenModPack/wiki/ZenTreasure
+
+
+*****************************************************************************************
+*	Server owner instructions:
+*****************************************************************************************
+
+Download mods and locate files:
+1. Download "@Zens Treasure" or "@Zens Enormous Package" mod in the usual way and get one of those working on your server first
+2. Open the \Addons folder where Zens mod installed, and confirm you can see a file there called "ZenTreasurePhotos.pbo"
+3. Download this "@Namalsk ZenTreasure" mod in the usual way too
+4. Open the \Addons folder where this mod installed, and confirm you can see a file here called "ZenTreasurePhotos.pbo"
+
+Copy over the Namalsk photos:
+5. In the Zens mod \Addons folder you opened at step 2, rename the "ZenTreasurePhotos.pbo" file to "ZenTreasurePhotos.pbo.original" to keep it as a backup.
+6. In the "@Namalsk ZenTreasure" mod folder you opened at step 4, copy both the two files from there (PBO and bisign) into the Zens mod \Addons folder that you opened at step 2.
+
+Additional info:
+7. You don't need to load this "Namalsk ZenTreasure" mod in your server startup, but you do need to have my "GoonWolf.bikey" in your server's \keys folder. The important bit is just to use my ZenTreasurePhotos.pbo file instead of the original that came with Zens mod.
+8. If you verify your original mod files, Steam will might reset the PBO file we copied in step 6. You will know this happened if you start seeing photos of Livonia. To fix, just repeat step 6 above and restart your server. You can try making that PBO read-only on your server to prevent this.
+9. (optional) I have included a couple of script options in the mod folder, which you can run at server startup to make sure the namalsk treasure PBO file is copied over the top of Zens original.
+10. (optional) I have included types.xml in the mod folder, which you can add to your CE files if you want photos to spawn naturally on your map. I prefer to use the "SpawnPhotosOnZombiesChance" setting in Zens mod - you can see all the treasure options on his wiki.
+
+*****************************************************************************************
+
+Tested with the May 2026 updates to Zens Treasure. 
+Shout out to Zenarchist for the relentlessly good work, think about buying the guy a coffee at: https://buymeacoffee.com/zenarchist.
+My source code is available on my github at: https://github.com/goonwolf666/NamalskZenTreasurePhotos/tree/main.
+This mod is are free to repack, alter, re-upload or do whatever with.

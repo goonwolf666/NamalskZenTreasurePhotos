@@ -1,0 +1,30 @@
+
+If Steam pushes an update to Zen's mods (or you verify them yourself), you might find Steam overwrites the Namalsk PBO file and re-installs Zens original one again.  
+
+If you have access to your server to run ONE of the the below script options, these will force over-write the old ZenTreasurePhotos.pbo with the Namalsk version every startup.
+
+Note in both instances, you need to update the main "modsFolder" path to the location that your mods are downloaded to...
+
+
+Powershell (save this in a PS1 script that's called at server startup):
+-----------------------------------------------------
+	$modsFolder = "INSERT YOUR FULL DAYZ MODS PATH HERE *WITH TRAILING SLASH*\"
+	$zenFolder = Join-Path $modsFolder "@Zens Enormous Package\addons"
+	$namalskFolder =  Join-Path $modsFolder "@Namalsk ZenTreasure\addons"
+	Copy-Item -Path "$namalskFolder\*" -Destination $zenFolder -Recurse -Force -Verbose
+-----------------------------------------------------
+
+
+Windows CMD (save this in a BAT file that's called at server startup):
+-----------------------------------------------------
+	@echo off
+	set "modsFolder=INSERT YOUR FULL DAYZ MODS PATH HERE WITH TRAILING SLASH\"
+	set "zenFolder=%modsFolder%@Zens Enormous Package\addons"
+	set "namalskFolder=%modsFolder%@Namalsk ZenTreasure\addons"
+	xcopy "%namalskFolder%\*" "%zenFolder%\" /Y /R /F /V
+-----------------------------------------------------
+
+
+These really only suit local/network/virtual private server hosts.  
+
+If you're using a shared game host with no admin access, you might be forced to copy the PBOs over by hand after updates.
